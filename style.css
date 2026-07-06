@@ -1,0 +1,1265 @@
+/* ==========================================
+   AYUSHI DIWAS
+   Premium Luxury Theme
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#080808;
+    color:#fff;
+    overflow-x:hidden;
+    line-height:1.7;
+
+}
+
+/* ---------- Animated Background ---------- */
+
+.bg{
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,#ff4da6 0%,transparent 30%),
+
+    radial-gradient(circle at bottom right,#7b2ff7 0%,transparent 35%),
+
+    linear-gradient(135deg,#080808,#140d24,#090909);
+
+    z-index:-3;
+
+}
+
+/* ---------- Floating Particles ---------- */
+
+.particles{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-2;
+
+}
+
+.particles::before{
+
+content:"";
+
+position:absolute;
+
+width:220%;
+
+height:220%;
+
+background-image:
+
+radial-gradient(rgba(255,255,255,.25) 1px,transparent 1px);
+
+background-size:45px 45px;
+
+animation:moveParticles 70s linear infinite;
+
+opacity:.35;
+
+}
+
+@keyframes moveParticles{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-900px);
+
+}
+
+}
+
+/* ---------- Navigation ---------- */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(20px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+color:#ff5ea8;
+
+text-shadow:0 0 20px rgba(255,94,168,.7);
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:16px;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#ff5ea8;
+
+}
+
+.invite-btn{
+
+padding:12px 28px;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#ff4da6,#ff884d);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.invite-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 15px 30px rgba(255,77,166,.35);
+
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:120px 20px 80px;
+
+text-align:center;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+padding:70px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:35px;
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.1);
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.top-title{
+
+font-size:22px;
+
+letter-spacing:5px;
+
+color:#ffd369;
+
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-family:'Cinzel',serif;
+
+font-size:90px;
+
+margin-bottom:15px;
+
+color:#ffffff;
+
+text-shadow:
+
+0 0 25px rgba(255,94,168,.7);
+
+}
+
+.hero h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:46px;
+
+font-weight:400;
+
+color:#ff5ea8;
+
+margin-bottom:25px;
+
+}
+
+.subtitle{
+
+font-size:22px;
+
+max-width:700px;
+
+margin:auto;
+
+opacity:.9;
+
+}
+
+.heart{
+
+font-size:55px;
+
+margin-top:35px;
+
+animation:heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+/* ==========================================
+   SECTION TITLES
+========================================== */
+
+.section-title{
+
+    text-align:center;
+    font-size:52px;
+    font-family:'Cinzel',serif;
+    margin-bottom:70px;
+    color:#fff;
+    letter-spacing:2px;
+    text-shadow:0 0 20px rgba(255,94,168,.5);
+
+}
+
+/* ==========================================
+   GOOD VIBES
+========================================== */
+
+.vibes{
+
+    padding:120px 8%;
+
+}
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(25px);
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-80px;
+right:-80px;
+
+width:180px;
+height:180px;
+
+background:rgba(255,94,168,.12);
+
+border-radius:50%;
+
+}
+
+.card:hover{
+
+transform:translateY(-15px);
+
+box-shadow:
+
+0 25px 60px rgba(255,94,168,.30);
+
+border:1px solid rgba(255,94,168,.35);
+
+}
+
+.emoji{
+
+font-size:65px;
+
+margin-bottom:25px;
+
+}
+
+.card h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+font-family:'Cinzel',serif;
+
+}
+
+.line{
+
+width:70px;
+
+height:3px;
+
+margin:18px auto 28px;
+
+background:linear-gradient(90deg,#ff5ea8,#ffd369);
+
+border-radius:50px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+opacity:.9;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown{
+
+padding:130px 8%;
+
+text-align:center;
+
+}
+
+.timer{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:60px;
+
+}
+
+.timer div{
+
+background:rgba(255,255,255,.08);
+
+padding:40px;
+
+border-radius:25px;
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.timer div:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 20px 50px rgba(255,94,168,.30);
+
+}
+
+.timer span{
+
+font-size:72px;
+
+font-weight:700;
+
+display:block;
+
+color:#ffd369;
+
+text-shadow:
+
+0 0 20px rgba(255,211,105,.45);
+
+}
+
+.timer p{
+
+margin-top:12px;
+
+font-size:18px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+}
+
+.event-date{
+
+margin-top:40px;
+
+font-size:24px;
+
+color:#ffb7da;
+
+font-weight:500;
+
+letter-spacing:2px;
+
+}
+/* ==========================================
+   VENUE SECTION
+========================================== */
+
+.venue-section{
+
+padding:120px 8%;
+
+}
+
+.venue-card{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(25px);
+
+border-radius:35px;
+
+padding:35px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.venue-image{
+
+overflow:hidden;
+
+border-radius:25px;
+
+}
+
+.venue-image img{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.venue-card:hover .venue-image img{
+
+transform:scale(1.08);
+
+}
+
+.venue-content h2{
+
+font-family:'Cinzel',serif;
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.location{
+
+font-size:22px;
+
+color:#ffd369;
+
+margin-bottom:10px;
+
+}
+
+.time{
+
+font-size:20px;
+
+color:#ff7abf;
+
+margin-bottom:25px;
+
+}
+
+.venue-text{
+
+font-size:18px;
+
+line-height:1.9;
+
+opacity:.9;
+
+margin-bottom:35px;
+
+}
+
+.map-button{
+
+display:inline-block;
+
+padding:16px 34px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+background:linear-gradient(90deg,#ff4da6,#ff884d);
+
+color:#fff;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.map-button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 40px rgba(255,77,166,.35);
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery-section{
+
+padding:120px 8%;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+.gallery-item{
+
+overflow:hidden;
+
+border-radius:25px;
+
+height:280px;
+
+}
+
+.gallery-item img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+transform:scale(1.12);
+
+}
+
+/* ==========================================
+   RSVP
+========================================== */
+
+.rsvp-section{
+
+padding:120px 8%;
+
+}
+
+.rsvp-card{
+
+max-width:750px;
+
+margin:auto;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(25px);
+
+padding:50px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.08);
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+.rsvp-card input,
+
+.rsvp-card textarea{
+
+padding:18px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+font-size:17px;
+
+}
+
+.rsvp-card textarea{
+
+height:160px;
+
+resize:none;
+
+}
+
+.rsvp-card input::placeholder,
+
+.rsvp-card textarea::placeholder{
+
+color:#ddd;
+
+}
+
+#joinBtn{
+
+padding:18px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#ff4da6,#ff884d);
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+#joinBtn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 40px rgba(255,77,166,.35);
+
+}
+
+.footer-note{
+
+text-align:center;
+
+margin-top:10px;
+
+opacity:.85;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+padding:70px 20px;
+
+text-align:center;
+
+background:#050505;
+
+margin-top:100px;
+
+}
+
+footer h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:48px;
+
+color:#ff5ea8;
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+margin:8px 0;
+
+opacity:.85;
+
+}
+/* ==========================================
+   PREMIUM ANIMATIONS
+========================================== */
+
+@keyframes float {
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.hero-content{
+
+animation:float 6s ease-in-out infinite;
+
+}
+
+.card,
+.timer div,
+.venue-card,
+.gallery-item,
+.rsvp-card{
+
+animation:fadeUp 1s ease both;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(#ff4da6,#7b2ff7);
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width:1100px){
+
+.hero h1{
+
+font-size:72px;
+
+}
+
+.hero h2{
+
+font-size:40px;
+
+}
+
+.venue-card{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+gap:18px;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+.hero{
+
+padding-top:170px;
+
+}
+
+.hero-content{
+
+padding:45px 25px;
+
+}
+
+.hero h1{
+
+font-size:56px;
+
+line-height:1.15;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.section-title{
+
+font-size:40px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.timer{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-item{
+
+height:250px;
+
+}
+
+.rsvp-card{
+
+padding:30px;
+
+}
+
+}
+
+@media (max-width:600px){
+
+body{
+
+font-size:15px;
+
+}
+
+.hero{
+
+min-height:90vh;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.top-title{
+
+font-size:16px;
+
+letter-spacing:2px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+margin-bottom:40px;
+
+}
+
+.timer{
+
+grid-template-columns:1fr;
+
+}
+
+.timer span{
+
+font-size:52px;
+
+}
+
+.logo{
+
+font-size:18px;
+
+text-align:center;
+
+}
+
+.invite-btn{
+
+padding:10px 20px;
+
+font-size:14px;
+
+}
+
+.venue-content h2{
+
+font-size:30px;
+
+}
+
+.location{
+
+font-size:18px;
+
+}
+
+.time{
+
+font-size:18px;
+
+}
+
+.venue-text{
+
+font-size:16px;
+
+}
+
+footer h2{
+
+font-size:36px;
+
+}
+
+footer p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+   IMAGE IMPROVEMENTS
+========================================== */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+.gallery-item img,
+.venue-image img{
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   HOVER GLOW
+========================================== */
+
+.card:hover,
+.timer div:hover,
+.gallery-item:hover,
+.rsvp-card:hover,
+.venue-card:hover{
+
+box-shadow:
+
+0 0 40px rgba(255,94,168,.18),
+
+0 25px 60px rgba(0,0,0,.35);
+
+transition:.35s;
+
+}
+
+/* ==========================================
+   BUTTON GLOW
+========================================== */
+
+.invite-btn,
+.map-button,
+#joinBtn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.invite-btn::after,
+.map-button::after,
+#joinBtn::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:80%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:skewX(-20deg);
+
+transition:.7s;
+
+}
+
+.invite-btn:hover::after,
+.map-button:hover::after,
+#joinBtn:hover::after{
+
+left:150%;
+
+}
